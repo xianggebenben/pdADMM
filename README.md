@@ -14,6 +14,7 @@ keras
 
 ## Run the Demo
 python ADMM_5_layer.py
+
 python ADMM_10_layer.py
 
 ## Data
