@@ -13,7 +13,8 @@ tensorflow
 keras
 
 ## Run the Demo
-python 
+python ADMM_5_layer.py
+python ADMM_10_layer.py
 
 ## Data
 Six benchmark datasets MNIST, Fashion-MNIST, kMNIST, SVHN, cifar10, cifar100 are included in this package.
