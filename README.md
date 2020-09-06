@@ -4,21 +4,21 @@ This is a implementation of parallel deep learning Alternating Direction Method 
 
 Junxiang Wang, Zheng Chai, Yue Cheng, and Liang Zhao. Toward Model Parallelism for Deep Neural Network based on Gradient-free ADMM Framework. (ICDM 2020)
 
-Installation
+##Installation
 python setup.py install
 
-Requirements
+##Requirements
 tensorflow
 
 keras
 
-Run the Demo
-python main.py
+##Run the Demo
+python 
 
-Data
+##Data
 Six benchmark datasets MNIST, Fashion-MNIST, kMNIST, SVHN, cifar10, cifar100 are included in this package.
 
-Cite
+##Cite
 Please cite our paper if you use this code in your own work:
 
 @inproceedings{wang2020toward,
