@@ -8,6 +8,7 @@ if not sys.warnoptions:
     warnings.simplefilter("ignore")
 from pdADMM import common
 from pdADMM.input_data import mnist,fashion_mnist,kmnist,svhn,cifar10,cifar100
+
 def Net(images, label, num_of_neurons):
     data =np.load("pdadmm_cifar100_full_batch_1000_iter_1e-4_lr_500_5layers.npz")
     W1 =tf.Variable(data["arr_0"])

@@ -154,39 +154,6 @@ class cifar10():
 		self.test = DataSubset(self.x_test, self.y_test)
 		self.train_down_sample = DataSubset(self.x_train_down_sample, self.y_train)
 		self.test_down_sample = DataSubset(self.x_test_down_sample, self.y_test)
-
-class cifar100():
-	def __init__(self):
-		self.mnist = tf.keras.datasets.cifar100
-		(self.x_train, self.y_train), (self.x_test, self.y_test) = self.mnist.load_data()
-		index = [i in (0,1,2) for i in self.y_train]
-		# Uncomment to normalize to (0, 1)
-		self.x_train, self.x_test = self.x_train / 255.0, self.x_test / 255.0
-		self.x_train = self.x_train.reshape(50000, 32 * 32*3)
-		self.x_train_down_sample = self.x_train.reshape((50000, 32, 32,3))
-		self.x_train_down_sample = scipy.ndimage.zoom(self.x_train_down_sample, (1, 0.5, 0.5,1), order=1).reshape(
-			50000, 16 * 16*3)
-		self.y_train = to_categorical(self.y_train, num_classes=100).reshape(50000, 100)
-		self.x_train =self.x_train[index]
-		self.x_train_down_sample = self.x_train_down_sample[index]
-		self.y_train =self.y_train[index]
-
-		index = [i in (0,1,2) for i in self.y_test]
-		self.x_test = self.x_test.reshape(10000,  32* 32 * 3)
-		self.x_test_down_sample = self.x_test.reshape((10000, 32, 32,3))
-		self.x_test_down_sample = scipy.ndimage.zoom(self.x_test_down_sample, (1, 0.5, 0.5,1), order=1).reshape(10000,
-																											  16 * 16*3)
-		self.y_test = to_categorical(self.y_test, num_classes=100).reshape(10000, 100)
-
-		self.x_test =self.x_test[index]
-		self.x_test_down_sample = self.x_test_down_sample[index]
-		self.y_test =self.y_test[index]
-
-		self.train = DataSubset(self.x_train, self.y_train)
-		self.test = DataSubset(self.x_test, self.y_test)
-		self.train_down_sample = DataSubset(self.x_train_down_sample, self.y_train)
-		self.test_down_sample = DataSubset(self.x_test_down_sample, self.y_test)
-
 class cifar100():
 	def __init__(self):
 		self.mnist = tf.keras.datasets.cifar100
@@ -241,33 +208,3 @@ class kmnist():
 		self.test = DataSubset(self.x_test, self.y_test)
 		self.train_down_sample = DataSubset(self.x_train_down_sample, self.y_train)
 		self.test_down_sample = DataSubset(self.x_test_down_sample, self.y_test)
-
-class imagenet():
-	def __init__(self):
-
-		train_data =tfds.as_numpy(tfds.load("imagenet_resized", split=tfds.Split.TRAIN, batch_size=-1))
-		test_data =tfds.as_numpy(tfds.load("imagenet_resized", split=tfds.Split.TEST, batch_size=-1))
-		self.x_train, self.y_train= train_data["image"],train_data["label"]
-		self.x_test, self.y_test = test_data["image"], test_data["label"]
-		# Uncomment to normalize to (0, 1)
-		self.x_train, self.x_test = self.x_train / 255.0, self.x_test / 255.0
-		self.x_train = self.x_train.reshape(60000, 28*28)
-		self.x_train_down_sample = self.x_train.reshape((60000, 28, 28))
-		self.x_train_down_sample = scipy.ndimage.zoom(self.x_train_down_sample, (1, 0.5, 0.5), order=1).reshape(
-			60000, 14*14)
-		self.y_train = to_categorical(self.y_train, num_classes=10).reshape(60000, 10)
-
-		self.x_test = self.x_test.reshape(10000,  28*28)
-		self.x_test_down_sample = self.x_test.reshape((10000, 28, 28))
-		self.x_test_down_sample = scipy.ndimage.zoom(self.x_test_down_sample, (1, 0.5, 0.5), order=1).reshape(10000,14*14)
-		self.y_test = to_categorical(self.y_test, num_classes=10).reshape(10000, 10)
-		self.train = DataSubset(self.x_train, self.y_train)
-		self.test = DataSubset(self.x_test, self.y_test)
-		self.train_down_sample = DataSubset(self.x_train_down_sample, self.y_train)
-		self.test_down_sample = DataSubset(self.x_test_down_sample, self.y_test)
-
-
-
-
-
-
