@@ -1,6 +1,6 @@
-# Toward Model Parallelism for Deep Neural Network based on Gradient-free ADMM Framework
+# pdADMM: parallel deep learning Alternating Direction Method of Multipliers
 
-This is a implementation of parallel learning Alternating Direction Method of Multipliers(pdADMM) for the deep neural network problem, as described in our paper:
+This is a implementation of parallel deep learning Alternating Direction Method of Multipliers(pdADMM) for the deep fully-connected neural network, as described in our paper:
 
 Junxiang Wang, Zheng Chai, Yue Cheng, and Liang Zhao. Toward Model Parallelism for Deep Neural Network based on Gradient-free ADMM Framework. (ICDM 2020)
 
