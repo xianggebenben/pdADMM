@@ -25,7 +25,7 @@ Please cite our paper if you use this code in your own work:
 
 @inproceedings{wang2020toward,
 
-author = {Junxiang Wang, Zheng Chai, Yue Cheng, and Liang Zhao},
+author = { Wang, Junxiang and Chai, Zheng and Cheng, Yue and Zhao, Liang},
 
 title = {Toward Model Parallelism for Deep Neural Network based on Gradient-free ADMM Framework},
 
