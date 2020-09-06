@@ -7,7 +7,7 @@ Junxiang Wang, Zheng Chai, Yue Cheng, and Liang Zhao. Toward Model Parallelism f
 ## Installation
 python setup.py install
 
-##Requirements
+## Requirements
 tensorflow
 
 keras
