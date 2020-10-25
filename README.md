@@ -8,17 +8,6 @@ serial_pdADMM  is the source code of serial implementation of the pdADMM algorit
 
 parallel_pdADMM is the source code of parallel implementation of the pdADMM algorithm.
 
-## Installation
-python setup.py install
-
-## Requirements
-tensorflow
-
-keras
-
-## Data
-Six benchmark datasets MNIST, Fashion-MNIST, kMNIST, SVHN, cifar10, cifar100 are included in this package.
-
 ## Cite
 Please cite our paper if you use this code in your own work:
 
