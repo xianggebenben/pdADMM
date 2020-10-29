@@ -33,11 +33,11 @@
   [layer2]
   server = 172.31.13.223 # ip of layer2
   ```
-2. On each node, run the following code. For the detailed use of Plasma, please visit https://arrow.apache.org/docs/python/plasma.html
+2. On each node, run the following command. For the detailed use of Plasma, please visit https://arrow.apache.org/docs/python/plasma.html
 ```
 plasma_store -m 30000000000 -s /home/ec2-user/plasma
 ```
-3. On each node, run the following code.
+3. On each node, run the following command.
 ```
 python3 server_pdadmm.py
 ```
